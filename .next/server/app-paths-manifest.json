@@ -2,10 +2,7 @@
   "/page": "app/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/api/pages/route": "app/api/pages/route.js",
-  "/api/blogs/route": "app/api/blogs/route.js",
   "/api/media/route": "app/api/media/route.js",
-  "/blog/[category]/[slug]/page": "app/blog/[category]/[slug]/page.js",
-  "/pages/[slug]/page": "app/pages/[slug]/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/admin/blogs/page": "app/admin/blogs/page.js"
+  "/api/blogs/route": "app/api/blogs/route.js",
+  "/admin/page": "app/admin/page.js"
 }
