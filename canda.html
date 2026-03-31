@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alwan ColorHub Flyer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root{
+      --blue:#0b97ca;
+      --poster-w:870px;
+      --poster-h:866px;
+      --sprite:url("https://www.genspark.ai/api/files/s/gV7NyzYw");
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      padding:20px;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      background:#eef1f4;
+      font-family:"Poppins", sans-serif;
+    }
+
+    .stage{
+      width:min(100%, 920px);
+      overflow:auto;
+    }
+
+    .poster{
+      position:relative;
+      width:var(--poster-w);
+      height:var(--poster-h);
+      background:#fff;
+      overflow:hidden;
+      margin:auto;
+      box-shadow:0 18px 45px rgba(0,0,0,.10);
+    }
+
+    .sprite{
+      background-image:var(--sprite);
+      background-repeat:no-repeat;
+      background-size:var(--poster-w) var(--poster-h);
+    }
+
+    .top-wave{
+      position:absolute;
+      left:0;
+      top:0;
+      width:870px;
+      height:58px;
+      background-position:0 0;
+    }
+
+    .brand{
+      position:absolute;
+      left:0;
+      top:62px;
+      width:630px;
+      height:201px;
+      background:var(--blue);
+    }
+
+    .brand .logo{
+      position:absolute;
+      left:42px;
+      top:18px;
+      color:#fff;
+      font-size:74px;
+      line-height:.9;
+      font-weight:300;
+      letter-spacing:-2px;
+    }
+
+    .brand .expertise{
+      position:absolute;
+      left:41px;
+      top:82px;
+      background:#fff;
+      color:var(--blue);
+      padding:3px 17px;
+      font-size:17px;
+      line-height:1;
+    }
+
+    .brand .title{
+      position:absolute;
+      left:0;
+      bottom:13px;
+      width:605px;
+      height:54px;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      padding-left:40px;
+      color:var(--blue);
+      font-size:37px;
+      font-weight:700;
+      letter-spacing:-.3px;
+    }
+
+    .small-logo{
+      position:absolute;
+      right:53px;
+      top:90px;
+      width:170px;
+      height:140px;
+      background-position:-645px -87px;
+    }
+
+    .headline{
+      position:absolute;
+      left:40px;
+      top:314px;
+      width:360px;
+      color:var(--blue);
+      font-size:18px;
+      line-height:1.36;
+      font-weight:400;
+    }
+
+    .headline strong{
+      display:block;
+      font-size:22px;
+      font-weight:700;
+      margin-bottom:2px;
+    }
+
+    .icon{
+      position:absolute;
+      background-image:var(--sprite);
+      background-repeat:no-repeat;
+      background-size:var(--poster-w) var(--poster-h);
+    }
+
+    .pdf-in{
+      left:56px;
+      top:482px;
+      width:70px;
+      height:86px;
+      background-position:-54px -480px;
+    }
+
+    .hub{
+      left:246px;
+      top:468px;
+      width:104px;
+      height:100px;
+      background-position:-244px -466px;
+    }
+
+    .pdf-1{
+      left:464px;
+      top:319px;
+      width:70px;
+      height:86px;
+      background-position:-464px -318px;
+    }
+
+    .pdf-2{
+      left:464px;
+      top:482px;
+      width:70px;
+      height:86px;
+      background-position:-464px -482px;
+    }
+
+    .pdf-3{
+      left:464px;
+      top:645px;
+      width:70px;
+      height:86px;
+      background-position:-464px -645px;
+    }
+
+    .caption{
+      position:absolute;
+      color:#5e5e5e;
+      font-size:12px;
+      line-height:1.18;
+      text-align:center;
+      font-weight:400;
+    }
+
+    .cap-in{
+      left:18px;
+      top:551px;
+      width:145px;
+    }
+
+    .cap-1{
+      left:436px;
+      top:384px;
+      width:145px;
+    }
+
+    .cap-2{
+      left:436px;
+      top:547px;
+      width:145px;
+    }
+
+    .cap-3{
+      left:436px;
+      top:710px;
+      width:145px;
+    }
+
+    .press{
+      position:absolute;
+      left:578px;
+      width:252px;
+      background-image:var(--sprite);
+      background-repeat:no-repeat;
+      background-size:var(--poster-w) var(--poster-h);
+    }
+
+    .press-1{
+      top:314px;
+      height:137px;
+      background-position:-578px -314px;
+    }
+
+    .press-2{
+      top:478px;
+      height:121px;
+      background-position:-578px -478px;
+    }
+
+    .press-3{
+      top:637px;
+      height:136px;
+      background-position:-578px -637px;
+    }
+
+    .arrows{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
+    }
+
+    .footer-bar{
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:100%;
+      height:10px;
+      background:var(--blue);
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="poster">
+      <div class="top-wave sprite"></div>
+
+      <div class="brand">
+        <div class="logo">Alwan</div>
+        <div class="expertise">Color Expertise</div>
+        <div class="title">Alwan ColorHub</div>
+      </div>
+
+      <div class="small-logo sprite"></div>
+
+      <div class="headline">
+        <strong>Save up to 30% of ink and toner</strong>
+        while printing accurate and<br />
+        predictable colors across all<br />
+        printing processes.
+      </div>
+
+      <div class="icon pdf-in"></div>
+      <div class="icon hub"></div>
+      <div class="icon pdf-1"></div>
+      <div class="icon pdf-2"></div>
+      <div class="icon pdf-3"></div>
+
+      <div class="caption cap-in">
+        PDF received with<br />
+        generic profile(s) and<br />
+        generic black
+      </div>
+
+      <div class="caption cap-1">
+        PDF optimized for<br />
+        digital print device<br />
+        profile, gray balance<br />
+        and black
+      </div>
+
+      <div class="caption cap-2">
+        PDF optimized for<br />
+        offset press profile,<br />
+        gray balance and<br />
+        black
+      </div>
+
+      <div class="caption cap-3">
+        PDF optimized for<br />
+        flexographic press<br />
+        profile, gray balance<br />
+        and black
+      </div>
+
+      <div class="press press-1"></div>
+      <div class="press press-2"></div>
+      <div class="press press-3"></div>
+
+      <svg class="arrows" viewBox="0 0 870 866" preserveAspectRatio="none">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#111"></path>
+          </marker>
+        </defs>
+
+        <line x1="126" y1="514" x2="241" y2="514" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="351" y1="514" x2="456" y2="514" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="320" y1="500" x2="452" y2="368" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="320" y1="528" x2="452" y2="679" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+      </svg>
+
+      <div class="footer-bar"></div>
+    </div>
+  </div>
+</body>
+</html>
